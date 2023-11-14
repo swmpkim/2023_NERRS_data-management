@@ -1,0 +1,142 @@
+---
+title: "Data (and Metadata) Management Strategies"
+author: Kim Cressman and Gabriel Kamener
+institute: Catbird Stats, LLC (KC); Florida International University (GK)
+date: 2023-11-16
+embed-resources: true
+format: 
+    revealjs:
+        incremental: true
+        theme: solarized
+        footer: "2023 NERRS Meeting"
+        code-line-numbers: true
+        slide-number: c/t
+---
+
+# Spreadsheets are useful
+
+## Even I will not fight this
+
+There are multiple purposes for keeping tabular data in spreadsheets:
+
+-   Data entry\
+-   Data storage\
+-   Data analysis\
+-   Presentation
+
+# Spreadsheets *can be* dangerous
+
+## Things to be careful of
+
+-   Proprietary software\
+-   Repeating data on many rows can lead to unnoticed mistakes\
+
+## Repetition mistakes
+
+![](images/veg-data-miscopied-1.png){fig-alt="data in a spreadsheet" fig-align="center" width="100%"}
+
+## Repetition mistakes
+
+![](images/veg-data-miscopied-2.png){fig-alt="data in a spreadsheet, with two rows outlined in orange" fig-align="center" width="100%"}
+
+## Repetition mistakes
+
+![](images/veg-data-miscopied-3.png){fig-alt="data in a spreadsheet, two rows outlined in orange, one of those rows highlighted in yellow. the data in those two rows should be the same because it references the same sampling plot, but the data in the highlighted line was accidentally pasted from the plot above." fig-align="center" width="100%"}
+
+## Things to be careful of
+
+-   Proprietary software\
+-   Repeating data on many rows can lead to unnoticed mistakes\
+-   Excessive formula use can eventually lead to unseen errors
+
+## Excel and dates
+
+-   dates "seen" differently in the computer than in our brains\
+-   dates seen differently based on operating system
+
+. . .
+
+![](images/oprah-date-meme.jpg){fig-alt="Oprah \"you get a car\" meme but with dates" fig-align="center" width="567"}
+
+
+# Best practices  
+
+## Helpful sources  
+
+-  Wickham 2014, Tidy Data  
+-  Broman and Woo 2018, Data Organization in Spreadsheets  
+-  White et al. 2013, Nine simple ways to make it easier to (re)use your data  
+
+## Rectangles  
+
+-  One table per sheet  
+-  When adding data, add rows, not columns 
+-  Be thoughtful about column names  
+    -  and don't use special characters in them
+-  Be thoughtful about representation of missing data  
+
+::: notes
+adding columns means you can't program column selections - which means you can't be consistent in how you analyze it
+
+column names should be descriptive while still not being overly long
+
+some disagreement about best way to represent missing data. White et al. represent the options and arguments nicely.
+:::
+
+## Make information explicit  
+
+-  QA/QC columns, rather than comments on a cell  
+-  Additional columns, rather than [only] color coding
+
+## Different tables for different data types  
+
+-  Think: site information you only measure once (lat/long, habitat type, etc.) vs. information you measure every time  
+-  Tables can be related to each other via common columns, known as "keys"  
+    -  can even do this in Excel, with XLOOKUP
+
+. . . 
+
+INSERT ONE OR BOTH OF GABE'S SCHEMA DIAGRAMS  
+
+## File organization and naming  
+
+FILL IN THIS SLIDE
+
+## Data safety  
+
+-  Don't do any calculations in the raw data file!  
+-  Back up your data!  
+
+
+# When to move beyond spreadsheets  
+
+## Seriously, when?  
+
+complex data, etc.  
+
+## Relational databases  
+
+what, how, etc. Maybe 2-3 slides  
+
+## Getting data back out  
+
+some info on queries, and mention thinking about this during database design too
+
+# Documenting your data  
+
+## Why  
+
+not just for others, but for you and future you and future colleagues down the road  
+
+## Metadata - what  
+
+At its most basic: who, what, why, where, how
+
+## Data Dictionaries  
+
+add details
+
+## JUST DO SOMETHING  
+
+Different ways - SWMP metadata, EML  
+Important thing is to capture the information - reformatting down the road is much easier than if you'd never written it down in the first place  
