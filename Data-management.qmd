@@ -83,7 +83,8 @@ There are multiple purposes for keeping tabular data in spreadsheets:
 
 ## Rectangles
 
--   One table per sheet\
+-   One table per sheet
+-   One row per observation, one column per variable
 -   When adding data, add rows, not columns
 -   One *type* of data per column
     -   don't type "No Data" in an otherwise numeric column
