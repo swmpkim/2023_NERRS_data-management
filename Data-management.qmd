@@ -13,9 +13,21 @@ format:
         slide-number: c/t
 ---
 
+## Goals for this presentation
+
+-   **NOT** to shame you\
+-   Give you some knowledge to build better datasets
+    -   some = a manageable amount
+    -   ...moving forward\
+-   Point you toward helpful resources
+
+::: notes
+moving forward, because re-doing old datasets is HARD. Would be great to get everything to match the best practices we'll talk about today, but not realistic. So try to implement these as you start new things.
+:::
+
 # Spreadsheets are useful
 
-## Even I will not fight this
+## Even I will not fight that fact
 
 There are multiple purposes for keeping tabular data in spreadsheets:
 
@@ -58,22 +70,24 @@ There are multiple purposes for keeping tabular data in spreadsheets:
 
 ![](images/oprah-date-meme.jpg){fig-alt="Oprah \"you get a car\" meme but with dates" fig-align="center" width="567"}
 
+# Best practices
 
-# Best practices  
+## Helpful sources
 
-## Helpful sources  
+-   Broman and Woo 2018, Data Organization in Spreadsheets ([open access](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989 "link to Broman and Woo 2018 full text"))
+-   White et al. 2013, Nine simple ways to make it easier to (re)use your data ([pdf](https://digitalcommons.denison.edu/cgi/viewcontent.cgi?article=2593&context=facultypubs "link to pdf of White et al. 2013"))\
+-   Tampa Bay Estuary Program [Data Management SOP](https://tbep-tech.github.io/data-management-sop/)
+-   Wickham 2014, Tidy Data ([open access](https://www.jstatsoft.org/article/view/v059i10 "link to landing page for Wickham 2014"))
 
--  Wickham 2014, Tidy Data  
--  Broman and Woo 2018, Data Organization in Spreadsheets  
--  White et al. 2013, Nine simple ways to make it easier to (re)use your data  
+## Rectangles
 
-## Rectangles  
-
--  One table per sheet  
--  When adding data, add rows, not columns 
--  Be thoughtful about column names  
-    -  and don't use special characters in them
--  Be thoughtful about representation of missing data  
+-   One table per sheet\
+-   When adding data, add rows, not columns
+-   One *type* of data per column
+    -   don't type "No Data" in an otherwise numeric column
+-   Be thoughtful about column names
+    -   and don't use special characters in them
+-   Be thoughtful about representation of missing data
 
 ::: notes
 adding columns means you can't program column selections - which means you can't be consistent in how you analyze it
@@ -83,60 +97,125 @@ column names should be descriptive while still not being overly long
 some disagreement about best way to represent missing data. White et al. represent the options and arguments nicely.
 :::
 
-## Make information explicit  
+## Make information explicit
 
--  QA/QC columns, rather than comments on a cell  
--  Additional columns, rather than [only] color coding
+-   QA/QC columns, rather than comments on a cell\
+-   Additional columns, rather than \[only\] color coding
 
-## Different tables for different data types  
+## Different tables for different data types
 
--  Think: site information you only measure once (lat/long, habitat type, etc.) vs. information you measure every time  
--  Tables can be related to each other via common columns, known as "keys"  
-    -  can even do this in Excel, with XLOOKUP
+-   Think: site information you only measure once (lat/long, habitat type, etc.) vs. information you measure every time
+
+. . .
+
+![](images/swmp-stn-table.png)\
+
+## Different tables for different data types
+
+-   Think: site information you only measure once (lat/long, habitat type, etc.) vs. information you measure every time
+-   Tables can be related to each other via common columns, known as "keys"
+    -   can even do this in Excel, with XLOOKUP
+
+## Example: fish monitoring data  
+
+. . .
+
+
+
+## Data safety
+
+-   Don't do any calculations in the raw data file!
+    -   Make a copy.
+-   Back up your data!
+    -   Keep it in 3 places
+    -   At least one in a different physical location
+
+# When to move beyond spreadsheets
+
+## Wait, what's "beyond" a spreadsheet?
+
+. . .
+
+**Relational database!**
+
+. . .
+
+"All relational databases organize data into sets of interlinked tables." -Thomer and Wickett 2020 ([open access](https://journals.sagepub.com/doi/full/10.1177/2053951720934838 "link to Thomer and Wickett 2020 paper"))
+
+. . .
+
+"A database is, in some sense, just a collection of tables, where there's some value in the tables that allows them to be connected to each other (the 'related' part of 'relational database')." -Data Carpentry 'Data Management with SQL for Ecologists' [workshop](https://datacarpentry.org/sql-ecology-lesson/00-sql-introduction.html#databases)
+
+## Some software examples
+
+-   Access
+
+-   Oracle
+
+-   MySQL
+
+## Advantages  
+
+(of a well-built relational database)
+
+-   "Front end" / "Back end"
+
+    -   data entry is (can be) human-friendly
+
+    -   data validation
+
+    -   data storage is computer-friendly
+
+    -   all the linkages happen without you having to think about them
+
+## Advantages  
+
+(of a well-built relational database)
+
+-   Queries - you can pull data back out in different ways
+
+    -   e.g., if you wanted the lat/long and habitat information associated with each individual sampling event or even individual fish
+
+        -   without the errors you'd get from copying and pasting that information into every sample row
+
+    -   WITHOUT altering the original data
+
+
+## Barriers
+
+-   Not everybody has ready access to database expertise
+
+-   Not every database is designed well
+
+-   Good databases require thoughtful design, as well as ongoing maintenance
+
+## When to think about databases
+
+-   Long-term projects
+
+-   Projects involving lots of complexity
+
+-   Projects where consistency system-wide is important  
 
 . . . 
 
-INSERT ONE OR BOTH OF GABE'S SCHEMA DIAGRAMS  
+![](images/schema-simple.png)
 
-## File organization and naming  
+# Documenting your data
 
-FILL IN THIS SLIDE
+## Why
 
-## Data safety  
+not just for others, but for you and future you and future colleagues down the road
 
--  Don't do any calculations in the raw data file!  
--  Back up your data!  
-
-
-# When to move beyond spreadsheets  
-
-## Seriously, when?  
-
-complex data, etc.  
-
-## Relational databases  
-
-what, how, etc. Maybe 2-3 slides  
-
-## Getting data back out  
-
-some info on queries, and mention thinking about this during database design too
-
-# Documenting your data  
-
-## Why  
-
-not just for others, but for you and future you and future colleagues down the road  
-
-## Metadata - what  
+## Metadata - what
 
 At its most basic: who, what, why, where, how
 
-## Data Dictionaries  
+## Data Dictionaries
 
 add details
 
-## JUST DO SOMETHING  
+## JUST DO SOMETHING
 
-Different ways - SWMP metadata, EML  
-Important thing is to capture the information - reformatting down the road is much easier than if you'd never written it down in the first place  
+Different ways - SWMP metadata, EML\
+Important thing is to capture the information - reformatting down the road is much easier than if you'd never written it down in the first place
