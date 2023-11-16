@@ -116,11 +116,9 @@ some disagreement about best way to represent missing data. White et al. represe
 -   Tables can be related to each other via common columns, known as "keys"
     -   can even do this in Excel, with XLOOKUP
 
-## Example: fish monitoring data  
+## Example: fish monitoring data
 
 . . .
-
-
 
 ## Data safety
 
@@ -144,6 +142,8 @@ some disagreement about best way to represent missing data. White et al. represe
 
 . . .
 
+------------------------------------------------------------------------
+
 "A database is, in some sense, just a collection of tables, where there's some value in the tables that allows them to be connected to each other (the 'related' part of 'relational database')." -Data Carpentry 'Data Management with SQL for Ecologists' [workshop](https://datacarpentry.org/sql-ecology-lesson/00-sql-introduction.html#databases)
 
 ## Some software examples
@@ -154,7 +154,7 @@ some disagreement about best way to represent missing data. White et al. represe
 
 -   MySQL
 
-## Advantages  
+## Advantages
 
 (of a well-built relational database)
 
@@ -168,7 +168,7 @@ some disagreement about best way to represent missing data. White et al. represe
 
     -   all the linkages happen without you having to think about them
 
-## Advantages  
+## Advantages
 
 (of a well-built relational database)
 
@@ -179,7 +179,6 @@ some disagreement about best way to represent missing data. White et al. represe
         -   without the errors you'd get from copying and pasting that information into every sample row
 
     -   WITHOUT altering the original data
-
 
 ## Barriers
 
@@ -195,11 +194,11 @@ some disagreement about best way to represent missing data. White et al. represe
 
 -   Projects involving lots of complexity
 
--   Projects where consistency system-wide is important  
+-   Projects where consistency system-wide is important
 
-. . . 
+. . .
 
-![](images/schema-simple.png)
+![](images/schema-simple.png){width="502"}
 
 # Documenting your data
 
