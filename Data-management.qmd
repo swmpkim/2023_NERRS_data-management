@@ -1,5 +1,5 @@
 ---
-title: "Data (and Metadata) Management Strategies"
+title: "Data Management Strategies"
 author: Kim Cressman and Gabriel Kamener
 institute: Catbird Stats, LLC (KC); Florida International University (GK)
 date: 2023-11-16
@@ -63,12 +63,14 @@ There are multiple purposes for keeping tabular data in spreadsheets:
 
 ## Excel and dates
 
--   dates "seen" differently in the computer than in our brains\
--   dates seen differently based on operating system
+. . .
+
+![](images/oprah-date-meme.jpg){fig-alt="Oprah \"you get a car\" meme but with dates" fig-align="center" width="500"}
 
 . . .
 
-![](images/oprah-date-meme.jpg){fig-alt="Oprah \"you get a car\" meme but with dates" fig-align="center" width="567"}
+-   dates "seen" differently in the computer than in our brains\
+-   dates seen differently based on operating system
 
 # Best practices
 
@@ -77,7 +79,7 @@ There are multiple purposes for keeping tabular data in spreadsheets:
 -   Broman and Woo 2018, Data Organization in Spreadsheets ([open access](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989 "link to Broman and Woo 2018 full text"))
 -   White et al. 2013, Nine simple ways to make it easier to (re)use your data ([pdf](https://digitalcommons.denison.edu/cgi/viewcontent.cgi?article=2593&context=facultypubs "link to pdf of White et al. 2013"))\
 -   Tampa Bay Estuary Program [Data Management SOP](https://tbep-tech.github.io/data-management-sop/)
--   Wickham 2014, Tidy Data ([open access](https://www.jstatsoft.org/article/view/v059i10 "link to landing page for Wickham 2014"))
+-   Data Carpentry Workshop on [Data Organization in Spreadsheets](https://datacarpentry.org/spreadsheet-ecology-lesson/)
 
 ## Rectangles
 
@@ -118,7 +120,11 @@ some disagreement about best way to represent missing data. White et al. represe
 
 ## Example: fish monitoring data
 
-. . .
+![](images/fish-tables-1.png){fig-align="center"}
+
+## Example: fish monitoring data
+
+![](images/fish-tables-2.png){fig-align="center"}
 
 ## Data safety
 
@@ -127,6 +133,14 @@ some disagreement about best way to represent missing data. White et al. represe
 -   Back up your data!
     -   Keep it in 3 places
     -   At least one in a different physical location
+
+## Documentation (Metadata)
+
+-   Who, what, when, where, why\
+-   How
+-   Data dictionary
+-   No universal standard, but several formats exist
+-   JUST DO IT
 
 # When to move beyond spreadsheets
 
@@ -138,11 +152,13 @@ some disagreement about best way to represent missing data. White et al. represe
 
 . . .
 
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+
 "All relational databases organize data into sets of interlinked tables." -Thomer and Wickett 2020 ([open access](https://journals.sagepub.com/doi/full/10.1177/2053951720934838 "link to Thomer and Wickett 2020 paper"))
 
 . . .
 
-------------------------------------------------------------------------
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
 
 "A database is, in some sense, just a collection of tables, where there's some value in the tables that allows them to be connected to each other (the 'related' part of 'relational database')." -Data Carpentry 'Data Management with SQL for Ecologists' [workshop](https://datacarpentry.org/sql-ecology-lesson/00-sql-introduction.html#databases)
 
@@ -200,21 +216,16 @@ some disagreement about best way to represent missing data. White et al. represe
 
 ![](images/schema-simple.png){width="502"}
 
-# Documenting your data
+# Wrap-up
 
-## Why
+-   Make it rectangular\
+-   Think about simple tables, and linkages\
+-   ...even if you stay in spreadsheets\
+-   Make it clear what's going on, through good naming systems and metadata
 
-not just for others, but for you and future you and future colleagues down the road
+## Helpful sources
 
-## Metadata - what
-
-At its most basic: who, what, why, where, how
-
-## Data Dictionaries
-
-add details
-
-## JUST DO SOMETHING
-
-Different ways - SWMP metadata, EML\
-Important thing is to capture the information - reformatting down the road is much easier than if you'd never written it down in the first place
+-   Broman and Woo 2018, Data Organization in Spreadsheets ([open access](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989 "link to Broman and Woo 2018 full text"))
+-   White et al. 2013, Nine simple ways to make it easier to (re)use your data ([pdf](https://digitalcommons.denison.edu/cgi/viewcontent.cgi?article=2593&context=facultypubs "link to pdf of White et al. 2013"))\
+-   Tampa Bay Estuary Program [Data Management SOP](https://tbep-tech.github.io/data-management-sop/)
+-   Data Carpentry Workshop on [Data Organization in Spreadsheets](https://datacarpentry.org/spreadsheet-ecology-lesson/)
